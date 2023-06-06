@@ -13,12 +13,24 @@
 
 const ulDOM = document.querySelector('ul');
 
-const data = [];
+const data = fetch('https://raw.githubusercontent.com/dittamaz/44-grupe-fetch/master/data/users.json')
+    .then((response) => {
+    return response.text();
+})
+.then((data) => {
+    for(const user of data) {
+        console.log(user);
+    }
+});
 
-let HTML = '';
+
+console.log(data);
+
+
+/*let HTML = '';
 
 for (const item of data) {
     HTML +=`<li>${item.id}) ${item.text}`;
 }
 
-ulDOM.innerHTML = HTML;
+ulDOM.innerHTML = HTML;*/
