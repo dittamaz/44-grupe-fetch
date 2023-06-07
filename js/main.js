@@ -11,22 +11,19 @@
 
 //console.log(demo);
 
+
 const ulDOM = document.querySelector('ul');
 
-const data = fetch('https://raw.githubusercontent.com/dittamaz/44-grupe-fetch/master/data/users.json')
+
+const data = fetch('https://dittamaz.github.io/44-grupe-fetch/data/users.json')
     .then((response) => {
-    return response.text();
-})
-.then((data) => {
-    for(const user of data) {
-        console.log(user);
-    }
-});
-
-
-console.log(data);
-
-
+        return response.text();
+    })
+    .then((data) => {
+        for (const users of data) {
+            console.log(users);
+        }
+    });
 /*let HTML = '';
 
 for (const item of data) {
