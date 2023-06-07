@@ -14,16 +14,17 @@
 
 const ulDOM = document.querySelector('ul');
 
-
-const data = fetch('https://dittamaz.github.io/44-grupe-fetch/data/users.json')
+const data = fetch('https://front-end-by-rimantas.github.io/44-grupe-fetch/data/users.json')
     .then((response) => {
-        return response.text();
+        return response.json();
     })
     .then((data) => {
-        for (const users of data) {
-            console.log(users);
+        for (const user of data) {
+            console.log(user);
         }
     });
+
+
 /*let HTML = '';
 
 for (const item of data) {
@@ -31,3 +32,5 @@ for (const item of data) {
 }
 
 ulDOM.innerHTML = HTML;*/
+
+
